@@ -187,45 +187,77 @@ attribute "haproxy/source/version",
   :display_name => "HAProxy source version",
   :description => "The version of haproxy to install.",
   :required => "optional",
-  :default => "1.4.22"
+  :default => "1.4.22",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/url",
   :display_name => "HAProxy source URL",
   :description => "The full URL to the haproxy source package.",
   :required => "optional",
-  :default => "http://haproxy.1wt.eu/download/1.4/src/haproxy-1.4.22.tar.gz"
+  :default => "http://haproxy.1wt.eu/download/1.4/src/haproxy-1.4.22.tar.gz",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/checksum",
   :display_name => "HAProxy source checksum",
   :description => "The checksum of the haproxy source package.",
   :required => "optional",
-  :default => "ba221b3eaa4d71233230b156c3000f5c2bd4dace94d9266235517fe42f917fc6"
+  :default => "ba221b3eaa4d71233230b156c3000f5c2bd4dace94d9266235517fe42f917fc6",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/prefix",
   :display_name => "HAProxy source prefix",
   :description => "The prefix used to make install haproxy.",
   :required => "optional",
-  :default => "/usr/local"
+  :default => "/usr/local",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/target_os",
   :display_name => "HAProxy source target OS",
   :description => "The target used to make haproxy.",
   :required => "optional",
-  :default => "generic"
+  :default => "generic",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/target_cpu",
   :display_name => "HAProxy source target CPU",
   :description => "The target cpu used to make haproxy.",
   :required => "optional",
-  :default => ""
+  :default => "",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/target_arch",
   :display_name => "HAProxy source target arch",
   :description => "The target arch used to make haproxy.",
   :required => "optional",
-  :default => ""
+  :default => "",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
 
 attribute "haproxy/source/use_pcre",
   :display_name => "HAProxy source use PCRE",
   :description => "Whether to build with libpcre support.",
-  :required => "optional"
+  :required => "optional",
+  :recipes => [
+    "haproxy::default",
+    "haproxy::install_source"
+ ]
